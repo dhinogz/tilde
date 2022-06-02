@@ -18,7 +18,7 @@
      *
      * Alternatively, create your own in the <style> tag below!
      */
-    theme: 'ashes-dark',
+    theme: 'nord-dark',
 
     /**
      * Action to take when the clock is clicked. Options include:
@@ -155,7 +155,7 @@
       {
         key: '*',
         search: '/?q={}',
-        url: 'https://duckduckgo.com',
+        url: 'https://google.com',
       },
       {
         key: 'bin',
@@ -197,6 +197,22 @@
         name: 'YouTube',
         search: '/results?search_query={}',
         url: 'https://youtube.com/feed/subscriptions',
+      },
+      {
+        key: 'w',
+        name: 'WhatsApp',
+        url: 'https://web.whatsapp.com',
+      },
+      {
+        key: 'dj',
+        name: 'Django Docs',
+        search: ':search/?q={}',
+        url: 'https://docs.djangoproject.com/en/4.0',
+      },
+      {
+        key: 'dock',
+        name: 'Docker Hub',
+        url: 'https://hub.docker.com',
       },
       {
         hues: ['355', '335'],
@@ -342,8 +358,10 @@
         key: '0',
         name: 'Local',
         search: ':{}',
-        url: 'http://localhost:3000',
+        url: 'http://localhost:8000',
       },
+      
+      
     ].map((command) => {
       const hsla = (hue, saturation = 'var(--command-color-saturation)') =>
         `hsla(${hue}, ${saturation}, var(--command-color-lightness), 1)`;
